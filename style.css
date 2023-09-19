@@ -1,5 +1,5 @@
 body {
-    background-image: url(/money-bg.jpeg);
+    background-image: url(./money-bg.jpeg);
     display: flex;
     align-items: center;
     flex-direction: column;
