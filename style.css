@@ -8,8 +8,29 @@ body {
 h1 {
     font-family: 'Allura';
     font-size: 140px;
-    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    animation-name: dripsicle;
+    animation-duration: 2s;
+    position: relative;
+    animation-iteration-count: infinite;
 
+
+
+
+}
+
+
+@keyframes dripsicle {
+    0% {
+        color: #FF4F87;
+        top: -50px;
+    }
+
+    100% {
+        color: #FF83C1;
+        top: 0px;
+    }
 }
 
 p {
@@ -25,61 +46,73 @@ h1:hover {
 .container {
     display: flex;
     border: 1px solid white;
+    flex-direction: column;
 }
 
 .form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     border: 1px solid white;
     flex-direction: column;
     width: 354px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.741);
-    
+    align-content: flex-end;
+
+
 
 }
 
 h2 {
     display: flex;
+    flex-direction: column;
     font-size: 4rem;
     text-align: center;
     flex-direction: column;
     font-family: 'Press Start 2P';
     color: white;
+    position: relative;
+    animation-name: login;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
-h2:hover {
-    transform: scale(1.5);
-    pointer: cursor;
+
+@keyframes login {
+    0% {
+        left: -50px;
+
+    }
+
+    50% {
+        left: 50px;
+        opacity: 0.1;
+
+    }
+
+    100% {
+        left: 50px;
+
+    }
 }
+
 
 
 #submit {
     font-family: 'Concert One';
     font-size: 25px;
     background-color: rgba(255, 255, 255, 50%);
+    
 }
+
 #submit:hover {
-    cursor: pointer;
-    transform: scale(.5);
-}
-#submit {
     animation-name: submit;
     animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count:infinite;
 }
+
 @keyframes submit {
-    0% {
-        background-color: #FF4F87;
-    }
-
     100% {
-        background-color: #FF83C1;
+        background-color: white;
     }
-}
-
-
-
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
 }
